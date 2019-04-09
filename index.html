@@ -11,16 +11,17 @@
 
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <input required name ="text" type="text" id="new-task-description" name="new-task-description" placeholder="description">
       <input type="submit" value="Create New Task">
     </form>
 
     <div id="list">
+      <h2>My Todos</h2>
+      <ul id="tasks">
+      </ul>
     </div>
-
+    <script src="./src/server.js"></script>
     <script src="./src/index.js"></script>
-    <script src="./src/TaskList.js"></script>
-    <script src="./src/TaskListItem.js"></script>
   </div>
 
 </body>
