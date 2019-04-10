@@ -9,15 +9,24 @@ function addTask(task) {
   const btn = document.createElement("button");
   btn.innerHTML = "X";
   btn.className = "delete";
-
+  const btnDone = document.createElement("button");
   //  add the text to the LI
   todoEl.innerText = task.text;
   todoEl.className = "todo";
   //  append button to the LI
   todoEl.appendChild(btn);
+
   //  append LI to list
   listEl.appendChild(todoEl);
+//DELETE BUTTON
+  const delBtn = todoEl.querySelector(".delete");
+  delBtn.addEventListener("click", function(e) {
+    deleteTask(task).then(() => todoEl.remove());
+  });
 }
+
+
+
 
 function addTasks(tasks) {
   tasks.forEach(addTask);
@@ -33,10 +42,7 @@ formEl.addEventListener("submit", event => {
   formEl.reset();
 });
 
-document.addEventListener("click", event => {
-  if (event.target.className === "delete") {
-    event.target.parentElement.remove();
-  }
-});
+
 
 getTasks().then(addTasks);
+

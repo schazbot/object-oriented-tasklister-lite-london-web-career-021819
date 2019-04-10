@@ -1,10 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "ride bike"
-    },
-    {
       "id": 2,
       "text": "drink tea"
     },
@@ -13,7 +9,7 @@
       "id": 3
     },
     {
-      "text": "eat biscuits",
+      "text": "ride bike",
       "id": 4
     }
   ]

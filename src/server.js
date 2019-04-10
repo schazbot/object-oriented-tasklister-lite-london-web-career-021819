@@ -11,3 +11,9 @@ function createTask(task) {
     body: JSON.stringify(task)
   }).then(resp => resp.json())
 }
+
+function deleteTask(task) {
+  return fetch(`${ENDPOINT}/${task.id}`, {
+    method: "DELETE"
+  }).then(resp => resp.json());
+}
