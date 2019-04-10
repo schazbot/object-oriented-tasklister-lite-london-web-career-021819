@@ -5,15 +5,21 @@ const listEl = document.querySelector("#tasks");
 function addTask(task) {
   // 	create LI
   const todoEl = document.createElement("li");
+  const cb = document.createElement("input");
+  cb.type = "checkbox";
+  cb.checked = false;
   //  create button
   const btn = document.createElement("button");
-  btn.innerHTML = "X";
+  btn.innerHTML = "Delete";
   btn.className = "delete";
-  const btnDone = document.createElement("button");
+  btn.style = "danger";
+
   //  add the text to the LI
   todoEl.innerText = task.text;
   todoEl.className = "todo";
   //  append button to the LI
+  todoEl.appendChild(cb);
+
   todoEl.appendChild(btn);
 
   //  append LI to list

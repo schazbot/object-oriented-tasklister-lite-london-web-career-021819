@@ -1,16 +1,12 @@
 {
   "tasks": [
     {
-      "id": 2,
-      "text": "drink tea"
+      "text": "drink tea",
+      "id": 5
     },
     {
       "text": "eat biscuits",
-      "id": 3
-    },
-    {
-      "text": "ride bike",
-      "id": 4
+      "id": 6
     }
   ]
 }
